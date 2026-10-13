@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b13">
+  <title>LifeOS — Your Personal Universe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar glass">
+      <a class="brand" href="#" data-view="home">
+        <span class="brand-mark">L</span>
+        <span>Life<span class="accent">OS</span><small>PERSONAL UNIVERSE</small></span>
+      </a>
+
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="home"><span>⌂</span>Overview</button>
+        <button class="nav-item" data-view="habits"><span>◉</span>Habit tracker</button>
+        <button class="nav-item" data-view="tasks"><span>☷</span>Daily tasks <b id="taskBadge">0</b></button>
+        <button class="nav-item" data-view="calendar"><span>▦</span>Calendar</button>
+        <button class="nav-item" data-view="goals"><span>◎</span>Goals</button>
+        <button class="nav-item" data-view="focus"><span>◷</span>Focus room</button>
+      </nav>
+
+      <div class="side-label">PERSONAL</div>
+      <nav class="nav-list">
+        <button class="nav-item" data-view="notes"><span>✎</span>Daily journal</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span>Settings & backup</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar" id="avatar">O</div>
+          <div><strong id="sideName">My Universe</strong><small>Personal workspace</small></div>
+          <button class="icon-button" data-view="settings" title="Settings">···</button>
+        </div>
+        <div class="storage-status"><span class="live-dot"></span> Saved on this device</div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="breadcrumbs">LifeOS <span>/</span> <strong id="breadcrumb">Overview</strong></div>
+        <div class="top-actions">
+          <span class="today-label" id="topDate"></span>
+          <button class="icon-button" data-view="settings" title="Settings">⚙</button>
+          <button class="avatar small-avatar" data-view="settings" id="topAvatar" title="Edit profile">O</button>
+        </div>
+      </header>
+
+      <div id="viewRoot"></div>
+
+      <footer>MADE FOR YOUR NEXT LEVEL <span>✦</span> LIFEOS <span id="saveStatus">ALL CHANGES SAVED LOCALLY</span></footer>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <input type="file" id="importFile" accept=".json,application/json" hidden>
+  <script src="script.js"></script>
+</body>
+</html>
